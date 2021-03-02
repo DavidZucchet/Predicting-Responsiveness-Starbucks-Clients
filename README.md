@@ -40,6 +40,8 @@ Comments were used to assist in walking through the thought process for individu
 
 * Regarding the Features Scores, we identified that the most important variable is “Days since member”, which shows the loyalty of the oldest clients in consuming products. In the other hand, income and age are variables that affect the result but not as much as “Days since member”. The gender variable seems to have no impact in the results.
 
+Read blog post at: 
+
 # Licensing, Authors, Acknowledgements
 Must give credit to Starbucks for the data and Udacity for the learning path in the DataScientist Course and some of the code that I reused. Otherwise, feel free to use the code here as you would like!
 
