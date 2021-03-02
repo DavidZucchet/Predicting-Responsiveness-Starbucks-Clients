@@ -25,7 +25,7 @@ For this project, I was interestested in using the data provided by Starbucks to
 # File Descriptions
 There are 5 files in the github repository
 There are 3 jason files with the raw data. 
-The Starbucks Capstone Project.ipnyb is a notebook that document and executes the following steps:
+The Starbucks_Capstone_Project.ipnyb is a notebook that document and executes the following steps:
 * Upload the starbucks information of consumer demographics and transactions during a period of time, with the offers sent clients.
 * Explored and visualize the Data
 * Apply a series of preprocessing steps for cleaning and getting finally a user-matrix for the ML model.
