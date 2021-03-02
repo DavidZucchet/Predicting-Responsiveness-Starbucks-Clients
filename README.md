@@ -1,4 +1,4 @@
-# Disaster Response Pipeline Project
+# Starbucks Capstone Project
 
 # Table of Contents
 1. Installation
@@ -10,35 +10,38 @@
 # Installation
 There should be no necessary libraries to run the code here beyond the Anaconda distribution of Python. The code should run with no issues using Python versions 3.*.
 
+The list of libraries used in the jupyter notebook are:
+
+* pandas
+* numpy
+* sklearn
+* matplotlib
+* seaborn
+* datetime
+
 # Project Motivation
-For this project, I was interestested in using the data provides by Figure Eight to build a model for an API that classifies disastes messages and can send them to an appropriate disaster relief agency.
+For this project, I was interestested in using the data provided by Starbucks to build a ML model that classifies persons wether will respond to an offer based on characteristics as Gender, Time_since_member, Income and Age aiming the goal to send offers efficiently.
 
 # File Descriptions
-There is 3 folders containing the data, models and the app. 
-The Data folder contains 2 CSV files with the raw data. The python file "process_data.py" has the code for extract, transform, clean and load the data.
-The models folder contains a python file "train_classifier.py". When executing this code it splits the data into a training set and a test set. Then, it creates a machine learning pipeline that uses NLTK, as well as scikit-learn's Pipeline and RandomSearchCV (RandomizedSearchCV is used instead of GridSearchCV because sacrifice in precision and accuracy is not huge in relation to processing time and finding best parameters) to output a final model that uses the message column to predict classifications for 36 categories (multi-output classification). Finally, it exports the model to a pickle file.
-The app folder contains a python file "run.py" that use the database and the model, and generate a web app using flask that displays data visualization and classify messages. It also has a folder with 2 html files for generating the web app. 
+There are 5 files in the github repository
+There are 3 jason files with the raw data. 
+The Starbucks Capstone Project.ipnyb is a notebook that document and executes the following steps:
+* Upload the starbucks information of consumer demographics and transactions during a period of time, with the offers sent clients.
+* Explored and visualize the Data
+* Apply a series of preprocessing steps for cleaning and getting finally a user-matrix for the ML model.
+* Execute a Classification model with random forest for obtaining the users influenced by the offers based on their demographics.
+* Refine our model doing GridSearchCV for finding the best parameters.
+A Readme.md file, which is the one you are reading in this moment.
 Comments were used to assist in walking through the thought process for individual steps.
 
 # Results
 
-### Instructions:
-1. Run the following commands in the project's root directory to set up your database and model.
+* The results obtained in the initial and adjusted model are satisfactory (greater than 60%). In most of the refined models, F-scores are greater than 70%, which shows its high predictive capacity in relation to the initial model. Additionally, the optimized parameters of GridSearchCV found are explaining in a better way the behavior of the costumers.
 
-    - To run ETL pipeline that cleans data and stores in database
-        `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
-    - To run ML pipeline that trains classifier and saves
-        `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
-
-2. Run the following command in the app's directory to run your web app.
-    `python run.py`
-
-3. Go to http://0.0.0.0:3001/
-
-The results of the model can be found at the web app.
+* Regarding the Features Scores, we identified that the most important variable is “Days since member”, which shows the loyalty of the oldest clients in consuming products. In the other hand, income and age are variables that affect the result but not as much as “Days since member”. The gender variable seems to have no impact in the results.
 
 # Licensing, Authors, Acknowledgements
-Must give credit to Figure Eight for the data and Udacity for the learning path in the DataScientist Course and some of the code that I reused. Otherwise, feel free to use the code here as you would like!
+Must give credit to Starbucks for the data and Udacity for the learning path in the DataScientist Course and some of the code that I reused. Otherwise, feel free to use the code here as you would like!
 
 
 
